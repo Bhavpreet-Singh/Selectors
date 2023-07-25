@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery ID selector</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1>Change Image</h1>
+        <div id="imageContainer">
+            <img id="image" src="oldimage.jpg" alt="Old Image">
+        </div>
+        <button id="changeImage">Change Image</button>
+        <script>
+            $(document).ready(function(){
+                $("#changeImage").click(function(){
+                    $("#image").attr("src", "newimage.jpg");
+                    $("#image").attr("alt", "New Image");
+                });
+            });
+        </script>
+    </body>
+</html>
