@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image Toggle Example</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1>Toggle Image</h1>
+        <div id="imageContainer">
+            <img id="image" src="kitten.jpg" alt="image">
+        </div>
+        <button id="toggleImage">Toggle Image</button>
+        <script>
+            $(document).ready(function(){
+                $("#toggleImage").click(function(){
+                    var currentImage = $("#image").attr("src");
+                    var newImage = currentImage ==="./kitten.jpg" ? "./lion.jpg":"./kitten.jpg";
+                    var newAllText = currentImage==="./kitten.jpg" ? "Lion Image":"Kitten Image";
+                    $("#image").attr("src", newImage);
+                    $("#image").attr("alt", newAllText);
+                });
+            });
+        </script>
+    </body>
+</html>
