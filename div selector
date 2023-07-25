@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head><title>jQuery div selector</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1>Change Image</h1>
+        <div id="imageContainer">
+            <img id="image" src="oldimage.jpg" alt="old image">
+        </div>
+        <button id="changeImage">Change Image</button>
+        <script>
+            $(document).ready(function() {
+                $("#changeImage").click(function(){
+                    $("div").html('<img id="image" src="newimage.jpg" alt="new image">');
+                });
+            });
+        </script>
+    </body>
+</html>
